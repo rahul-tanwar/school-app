@@ -5,6 +5,7 @@ import { Activity } from '../../shared/models/Activity';
 import * as moment from 'moment';
 import { LoginStaticData } from '../../shared/models/LoginStaticData';
 import { UIHelper } from '../../shared/Helper/UIHelper';
+import { PhotoViewer } from '@ionic-native/photo-viewer';
 
 /**
  * Generated class for the ActivitiesPage page.
@@ -43,7 +44,8 @@ export class ActivitiesPage {
 
     constructor(public uIHelper: UIHelper,
         public navCtrl: NavController, public navParams: NavParams,
-        private activityService: ActivityService) {
+        private activityService: ActivityService,
+        private photoViewer: PhotoViewer) {
     }
 
     ionViewDidLoad() {
@@ -63,6 +65,10 @@ export class ActivitiesPage {
         }, (error) => {
             this.uIHelper.HideSpinner();
         });
+    }
+
+    imagePreview(imgURL:string){
+        this.photoViewer.show(imgURL);
     }
 
 

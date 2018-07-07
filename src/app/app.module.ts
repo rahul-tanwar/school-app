@@ -15,6 +15,8 @@ import { WelcomePageModule } from '../pages/welcome/welcome.module';
 
 import { ProfilePageModule } from "../pages/profile/profile.module";
 import { ProfilePage } from "../pages/profile/profile";
+import { TeacherProfilePageModule } from "../pages/teacher-profile/teacher-profile.module";
+import { TeacherProfilePage } from "../pages/teacher-profile/teacher-profile";
 
 import { ParentDashboardPageModule } from "../pages/parent-dashbord/parent-dashboard.module";
 import { ParentDashboardPage } from "../pages/parent-dashbord/parent-dashboard";
@@ -45,6 +47,7 @@ import { ChildService } from '../shared/services/ChildService';
 import { ParentMenuPage } from '../pages/parent-menu/parent-menu';
 import { ParentMenuPageModule } from '../pages/parent-menu/parent-menu.module';
 import { UIHelper } from '../shared/Helper/UIHelper';
+import { PhotoViewer } from '@ionic-native/photo-viewer';
 
 @NgModule({
     declarations: [
@@ -61,6 +64,7 @@ import { UIHelper } from '../shared/Helper/UIHelper';
         TeacherDashboardPageModule,
         MenuTeacherPageModule,
         ProfilePageModule,
+        TeacherProfilePageModule,
         HttpModule,
         HttpClientModule,
         ParentMenuPageModule,
@@ -76,6 +80,7 @@ import { UIHelper } from '../shared/Helper/UIHelper';
         TeacherDashboardPage,
         MenuTeacherPage,
         ProfilePage,
+        TeacherProfilePage,
         ParentMenuPage,
         AddFirstChildPage
     ],
@@ -95,6 +100,7 @@ import { UIHelper } from '../shared/Helper/UIHelper';
         NativePageTransitions,
         ParentService,
         ChildService,
+        PhotoViewer,
         Messages,
         {
             provide: HTTP_INTERCEPTORS,

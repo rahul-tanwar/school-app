@@ -1,8 +1,4 @@
-<ion-header>
-    <ion-navbar color="secondary">
-        <ion-title>My Profile</ion-title>
-    </ion-navbar>
-</ion-header>
+ 
 <ion-content padding class="bg-color">
     <ion-card>
         <ion-card-content>
@@ -18,14 +14,8 @@
 
                 <ion-item>
                     <ion-label floating>Email</ion-label>
-                    <ion-input type="email" [(ngModel)]="teacher.Email"></ion-input>
-                </ion-item>
-
-                <ion-item>
-                    <ion-label floating>Password</ion-label>
-                    <ion-input type="text" [(ngModel)]="teacher.Email"></ion-input>
-                </ion-item>
-
+                    <ion-input type="email" [(ngModel)]="teacher.Email" disabled></ion-input>
+                </ion-item> 
                 <ion-item>
                     <ion-label floating>Phone</ion-label>
                     <ion-input type="number" [(ngModel)]="teacher.ContactNumber"></ion-input>
@@ -44,9 +34,10 @@
                     <ion-datetime [(ngModel)]="teacher.DOB" displayFormat="MM/DD/YYYY"></ion-datetime>
                 </ion-item>
 
-                <div style="padding-left:20px">
+                 
+                <div text-center>
                     <button ion-button color="Default" (click)="updateProfile()">Update</button>
-                    <button ion-button color="light" (click)="goBack()">Cancel</button>
+                    <!-- <button ion-button color="light" (click)="goBack()">Cancel</button> -->
                 </div>
             </ion-list>
         </ion-card-content>

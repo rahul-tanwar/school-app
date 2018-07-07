@@ -13,17 +13,22 @@
         </ion-item>
 
         <ion-item>
-            <ion-label>Date</ion-label>
+            <ion-label>When Date</ion-label>
             <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="selectedDate">{{ selectedDate | date:'MM/DD/YYYY' }}</ion-datetime>
         </ion-item>
 
         <ion-item>
-            <ion-label>Time</ion-label>
+            <ion-label>When Time</ion-label>
             <ion-datetime displayFormat="hh:mm A" [(ngModel)]="selectedTime">{{selectedTime}}</ion-datetime>
         </ion-item>
 
         <ion-item>
-            <ion-label floating> Notice Details...</ion-label>
+            <ion-label floating> Notice Title</ion-label>
+            <ion-input type="text" [(ngModel)]="Title"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating> Notice Details</ion-label>
             <ion-input type="text" [(ngModel)]="Notes"></ion-input>
         </ion-item>
 

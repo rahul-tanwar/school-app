@@ -1,6 +1,7 @@
 import { Component, ChangeDetectorRef } from '@angular/core';
 import { IonicPage, NavController, NavParams, PopoverController } from 'ionic-angular';
 import { StudentCheckInPage } from './../student-check-in/student-check-in';
+import { StudentCheckOutPage } from './../student-check-out/student-check-out';
 import { ActionPage } from './../action/action';
 import { MenuTeacherPage } from "./../menu-teacher/menu-teacher";
 import { UIHelper } from '../../shared/Helper/UIHelper';
@@ -18,6 +19,7 @@ import { DataHelper } from '../../shared/Helper/DataHelper';
 })
 export class TeacherDashboardPage {
     studentCheckinTab: any;
+    studentCheckoutTab:any;
     actionTab: any;
     constructor(public navCtrl: NavController, public navParams: NavParams,
         private changeDetectorRef: ChangeDetectorRef,
@@ -25,6 +27,7 @@ export class TeacherDashboardPage {
         private UiHelper: UIHelper, private dataHelper: DataHelper,
         public activityService: ActivityService, private notificationService: NotificationService) {
         this.studentCheckinTab = StudentCheckInPage;
+        this.studentCheckoutTab=StudentCheckOutPage;
         this.actionTab = ActionPage;
 
     }
