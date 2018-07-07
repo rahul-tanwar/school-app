@@ -4,9 +4,9 @@
         <ion-card-content>
             <ion-grid class="border-Profile-grid">
                 <ion-row>
-                    <ion-col col-12 class="aligncenter">
+                    <!-- <ion-col col-12 class="aligncenter">
                         <ion-icon name="contact"></ion-icon>
-                    </ion-col>
+                    </ion-col> -->
                     <ion-col col-12>
                         <form novalidate #updateparentform="ngForm" (ngSubmit)="save()">
                             <ion-list>
@@ -20,7 +20,7 @@
                                     <ion-input type="text" name="LastName" [(ngModel)]="parent.LastName" required></ion-input>
                                 </ion-item>
 
-                                <ion-item class="flt-left wd-50">
+                                <ion-item class="">
                                     <ion-label floating>Gender</ion-label>
                                     <ion-select name="Gender" [(ngModel)]="parent.Gender" required>
                                         <ion-option value="1">Male</ion-option>
@@ -44,11 +44,10 @@
                                 </ion-item>
 
                                 <div style="padding-left:20px">
-                                    <button full ion-button color="Default" [disabled]="!updateparentform.form.valid">Update</button>
+                                    <button full ion-button color="Default" style="margin-top: 12px" [disabled]="!updateparentform.form.valid">Update</button>
                                 </div>
-                                <br/>
                             </ion-list>
-                        </form>>
+                        </form>
                     </ion-col>
                 </ion-row>
             </ion-grid>

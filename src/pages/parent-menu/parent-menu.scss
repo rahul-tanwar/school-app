@@ -2,7 +2,7 @@ page-parent-menu {
     ion-icon {
         font-size: 1.5em;
         margin-right: 10px;
-        color: #ff8f00;
+        color: #0092b5;
          
    }
    .item-checkbox-img {
@@ -14,6 +14,11 @@ page-parent-menu {
   }
   .parent-menu
   {font-weight: 600;}
-  .list-header-md{    background: #ef9d09;
+  .list-header-md{   
+       background: #141414;
     color: #ffffff;}
+
+    .label-md {
+        font-size: 16px !important;    
+    }
 }

@@ -17,13 +17,15 @@ export class AcitivitieGroup {
     public activities: Activity[];
 }
 
-export enum FaClass {
-    'fa-camera' = 1,
-    'fa-cutlery' = 2,
-    'fa-book' = 3,
-    'fa-child' = 4,
-    'fa-sticky-note' = 5,
-    'fa-bed' = 6
+export enum ActivitiesIcon {
+    'ios-camera' = 1,
+    'ios-cafe' = 2,
+    'ios-school' = 3,
+    'ios-clipboard' = 4,
+    'ios-moon' = 5,
+    'ios-radio-button-off' = 6,
+    'ios-arrow-dropright-circle' = 7,
+    'ios-arrow-dropleft-circle' = 8,
 }
 
 
@@ -37,6 +39,7 @@ export class ActivitiesPage {
 
     public activities: Array<Activity> = [];
     public acitivitieGroup: AcitivitieGroup[] = [];
+    public activityIcon = ActivitiesIcon;
 
     constructor(public uIHelper: UIHelper,
         public navCtrl: NavController, public navParams: NavParams,

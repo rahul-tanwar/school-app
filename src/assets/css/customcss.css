@@ -26,7 +26,7 @@ ion-avatar.padding-b-10{padding-bottom: 10px;}
 .color-light-green{color:#20da6a  !important;}
 
 .tabs-md .tab-button[aria-selected=true] {
-    border-bottom: 2px solid #f71c59;
+    border-bottom: 2px solid #55acee;
 }
 
 .action-sheet-md .action-sheet-button {border-bottom: 1px solid #d9e0e4 !important;}
@@ -43,3 +43,9 @@ ion-avatar.padding-b-10{padding-bottom: 10px;}
       .scroll { 
         min-width: 100%;
       }
+
+
+  /* parent app css */    
+  .toolbar-md-twitter .toolbar-background-md {
+    background: #0094b8;
+  }
