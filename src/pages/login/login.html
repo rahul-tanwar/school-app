@@ -1,0 +1,53 @@
+<ion-header>
+    <ion-navbar color="twitter">
+        <ion-title>Login as {{loginBy}}</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="bg-color">
+
+    <ion-grid class="border-Profile-grid">
+
+        <form [formGroup]="loginForm" (submit)="loginUser()" novalidate>
+            <ion-row>
+                <ion-col col-12>
+                    <ion-list>
+                        <ion-item>
+                            <ion-label floating>Email</ion-label>
+                            <ion-input formControlName="email" value="sudrikmangesh@gmail.com" type="email" [class.invalid]="!loginForm.controls.email.valid && blur">
+                            </ion-input>
+                        </ion-item>
+                        <ion-item class="error-message" *ngIf="!loginForm.controls.email.valid &&
+                 loginForm.controls.email.dirty">
+                            <p class="error">Please enter a valid email address.</p>
+                        </ion-item>
+
+                        <ion-item>
+                            <ion-label floating>Password</ion-label>
+                            <ion-input formControlName="password" value="123456" type="password" [class.invalid]="!loginForm.controls.password.valid && blur">
+                            </ion-input>
+                        </ion-item>
+                        <ion-item class="error-message" *ngIf="!loginForm.controls.password.valid
+                && loginForm.controls.password.dirty">
+                            <p class="error">Your password needs more than 6 characters.</p>
+                        </ion-item>
+
+                        <ion-item class="aligncenter">
+                            <button ion-button round type="submit" [disabled]="!loginForm.valid">Login</button>
+
+                        </ion-item>
+                        <ion-item class="aligncenter">
+                            <button ion-button round (click)="goToResetPassword()" style="color:white">
+                                Forgot
+                            </button>
+
+                        </ion-item>
+
+                        <br/>
+                    </ion-list>
+                </ion-col>
+            </ion-row>
+        </form>
+
+    </ion-grid>
+</ion-content>

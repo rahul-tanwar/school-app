@@ -1,0 +1,91 @@
+<!--
+  Generated template for the ProfilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!-- <ion-header >
+
+    <ion-navbar color="dark">
+      <ion-title>Child Profile</ion-title>
+    </ion-navbar>
+
+  </ion-header> -->
+
+
+<ion-content padding class="bg-color">
+
+    <ion-card>
+
+        <ion-card-content>
+            <ion-grid class="border-Profile-grid">
+
+                <ion-row>
+                    <ion-col col-6>
+                        <ion-icon name="sync" *ngIf="childIds.length === 2" (click)="switchChild()"></ion-icon>
+                    </ion-col>
+
+                    <ion-col col-6>
+                        <ion-icon name="add-circle" *ngIf="childIds.length === 1" (click)="addClild()"></ion-icon>
+                    </ion-col>
+                    <ion-col col-12 class="aligncenter">
+                        <ion-icon name="bicycle"></ion-icon>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-12>
+
+                        <ion-list *ngIf="student">
+                            <ion-item>
+                                <ion-label floating>Name</ion-label>
+                                <ion-input type="text" [(ngModel)]="student.Name" disabled></ion-input>
+                            </ion-item>
+                            <ion-item>
+                                <ion-label floating>School</ion-label>
+                                <ion-input type="text" [(ngModel)]="student.SchoolName" disabled></ion-input>
+                            </ion-item>
+
+                            <ion-item class="flt-left">
+                                <ion-label floating>Class</ion-label>
+                                <ion-input type="text" [(ngModel)]="student.ClassName" disabled></ion-input>
+                            </ion-item>
+
+
+                            <!-- <ion-item class="flt-left wd-50">
+                                <ion-label floating>City</ion-label>
+                                <ion-input type="text" [(ngModel)]="student.Name"></ion-input>
+                            </ion-item> -->
+
+
+                            <ion-item class="flt-left wd-50">
+                                <ion-label floating>Gender</ion-label>
+                                <ion-select [(ngModel)]="student.Gender" disabled>
+                                    <ion-option value="1">Male</ion-option>
+                                    <ion-option value="2">Female</ion-option>
+                                </ion-select>
+                            </ion-item>
+
+
+                            <ion-item class="flt-left wd-50">
+                                <ion-label floating>Date of Birth</ion-label>
+                                <ion-datetime [(ngModel)]="student.DOB" displayFormat="MM/DD/YYYY" disabled></ion-datetime>
+                            </ion-item>
+
+                            <!-- <ion-item class="aligncenter">
+                <button ion-button round>Save</button>               
+              </ion-item> -->
+                            <br/>
+                        </ion-list>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-card-content>
+
+    </ion-card>
+
+
+
+
+
+
+</ion-content>

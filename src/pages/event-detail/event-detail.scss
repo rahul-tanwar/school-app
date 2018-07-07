@@ -1,0 +1,47 @@
+page-event-detail {
+    .bg-color{
+        background: #f1f1f1
+    }
+
+    .card-content-md{
+        padding: 8px 7px !important;
+    }
+    
+
+    .aligncenter{
+        text-align: -webkit-center;
+    }
+    
+    .title ion-icon{
+        font-size: 2.2em;
+        color: white;
+    }
+    .title h3{
+        font-size: 1.7em;
+        color: white;
+        padding-top: 3px;
+    }
+
+    .color-gray{
+        color: #909090;
+    }
+    .assignmenttitle{
+    font-size: 1.2em;
+    font-weight: 500;
+    }
+
+    .flex-container{
+        display: flex;
+        font-weight: 500;
+    }
+
+    .label-md {
+        margin: 9px 8px 13px 0;
+    }
+    .flex-container p{
+        font-weight: 500;
+        color: green;
+    margin-top: 10px;
+    }
+
+}

@@ -1,0 +1,64 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            {{activityName}}
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-col col-12>
+        <ion-item>
+            <ion-label floating>Class</ion-label>
+            <ion-select [(ngModel)]="selectedClass" interface="action-sheet" (ionChange)="getClassChilds($event)">
+                <ion-option *ngFor="let class of classes" [value]="class.ClassId">{{class.ClassName}}</ion-option>
+            </ion-select>
+        </ion-item>
+
+    </ion-col>
+
+    <ion-toolbar>
+        <ion-searchbar (input)="getItems($event)"></ion-searchbar>
+    </ion-toolbar>
+
+    <ion-item-group>
+        <ion-item-divider color="light">
+            <p item-left>Select All Student(s)</p>
+
+            <ion-toggle color="secondary" [(ngModel)]="allStudent" (ngModelChange)="selectAllStudent($event)" style="margin-right:9px;"></ion-toggle>
+
+        </ion-item-divider>
+        <ion-list no-lines>
+            <ion-item *ngFor="let item of searchData" class="custom-bg">
+                <ion-avatar item-left>
+                    <ion-icon name="contact"></ion-icon>
+                </ion-avatar>
+
+                <ion-label>{{item.Name}}</ion-label>
+                <ion-toggle color="secondary" [(ngModel)]="item.IsPresent" (ngModelChange)="onFilterChange()" item-righ></ion-toggle>
+            </ion-item>
+
+        </ion-list>
+    </ion-item-group>
+</ion-content>
+
+<ion-footer no-shadow>
+    <ion-toolbar position="bottom" class="npadding">
+
+        <ion-row>
+            <ion-col col-6 class="animated slideInUp">
+                <button class="npadding" color="danger" full ion-button (click)="goBack()">Go Back</button>
+
+            </ion-col>
+            <ion-col col-6 class="animated slideInUp">
+                <button class="npadding" color="secondary" full ion-button [disabled]="!showNextButton" (click)="openActivityOrNotificationPage()">
+                    <ion-icon name='ion-record'></ion-icon>  Next</button>
+            </ion-col>
+
+        </ion-row>
+
+
+
+    </ion-toolbar>
+</ion-footer>

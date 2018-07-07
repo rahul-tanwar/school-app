@@ -1,0 +1,86 @@
+<ion-content class="bg-color">
+    <ion-item-group>
+        <ion-item-divider color="light">Add Activity</ion-item-divider>
+        <ion-item class="no-padd center">
+            <ion-row>
+                <ion-col col-4>
+                    <ion-avatar class="padding-b-10 color-light-green animated bounceIn">
+                        <ion-icon ios="ios-camera" md="md-camera" (click)="goToSelectStudentPage('1')"></ion-icon>
+                    </ion-avatar>
+                    <p>Photo/Video</p>
+
+                </ion-col>
+                <ion-col col-4>
+                    <ion-avatar class="padding-b-10 color-light-green animated bounceIn">
+                        <ion-icon ios="ios-cafe" md="md-cafe" (click)="goToSelectStudentPage('2')"></ion-icon>
+                    </ion-avatar>
+                    <p>Food</p>
+                </ion-col>
+                <ion-col col-4>
+                    <ion-avatar class="padding-b-10 color-light-green animated bounceIn">
+                        <ion-icon ios="ios-school" md="md-school" (click)="goToSelectStudentPage('3')"></ion-icon>
+                    </ion-avatar>
+                    <p>Learning</p>
+                </ion-col>
+            </ion-row>
+
+        </ion-item>
+        <ion-item class="no-padd center">
+            <ion-row>
+                <ion-col col-4>
+                    <ion-avatar class="padding-b-10 color-light-green animated bounceIn">
+                        <ion-icon ios="ios-clipboard" md="md-clipboard" (click)="goToSelectStudentPage('4')"></ion-icon>
+                    </ion-avatar>
+                    <p>Notes/</p>
+                    <p>Observation</p>
+                </ion-col>
+                <ion-col col-4>
+                    <ion-avatar class="padding-b-10 color-light-green animated bounceIn">
+                        <ion-icon ios="ios-moon" md="md-moon" (click)="goToSelectStudentPage('5')"></ion-icon>
+                    </ion-avatar>
+                    <p>Nap</p>
+                </ion-col>
+                <ion-col col-4>
+                    <ion-avatar class="padding-b-10 color-light-green animated bounceIn">
+                        <ion-icon ios="ios-radio-button-off" md="md-radio-button-off" (click)="goToSelectStudentPage('6')"></ion-icon>
+                    </ion-avatar>
+                    <p>Potty/</p>
+                    <p>Diaper</p>
+                </ion-col>
+            </ion-row>
+        </ion-item>
+    </ion-item-group>
+    <ion-item-group>
+        <ion-item-divider color="light">
+            <ion-row>
+                <ion-col>
+                    <label>Send Notification </label>
+                </ion-col>
+            </ion-row>
+        </ion-item-divider>
+        <ion-item class="no-padd center">
+            <ion-row>
+                <ion-col col-4 (click)="goToSelectStudentPage('1',true)">
+                    <ion-avatar class="padding-b-10 color-light-green animated bounceIn">
+                        <ion-icon name="book"></ion-icon>
+                    </ion-avatar>
+                    <p>Assignment</p>
+                </ion-col>
+                <ion-col col-4 (click)="goToSelectStudentPage('3',true)">
+                    <ion-avatar class="padding-b-10 color-light-green animated bounceIn">
+                        <ion-icon ios="ios-notifications" md="md-notifications"></ion-icon>
+                    </ion-avatar>
+                    <p>Notice</p>
+                </ion-col>
+                <ion-col col-4 (click)="goToSelectStudentPage('2',true)">
+                    <ion-avatar class="padding-b-10 color-light-green animated bounceIn">
+                        <ion-icon ios="ios-calendar" md="md-calendar"></ion-icon>
+                    </ion-avatar>
+                    <p>Event</p>
+                </ion-col>
+            </ion-row>
+        </ion-item>
+    </ion-item-group>
+
+
+</ion-content>

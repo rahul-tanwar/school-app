@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-title>Hi Parent</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="logOut()">
+        <ion-icon name="log-out"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="bg-color">
+  The world is your oyster.
+  <p>
+    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
+  </p>
+  <ion-list>
+    <ion-item>
+      <button ion-button icon-only (click)="activitiesPage()">
+        Open Activity
+      </button>
+    </ion-item>
+
+    <ion-item>
+      <button ion-button icon-only (click)="notificationsPage()">
+        Open Notifications
+      </button>
+    </ion-item>
+    <ion-item>
+      <button ion-button icon-only (click)="OpenProfile()">
+        Profile Page
+        </button>
+      <br/>
+    </ion-item>
+
+    <ion-item>
+      <button ion-button icon-only (click)="OpenChildProfile()">
+        Child Profile Page
+      </button>
+    </ion-item>
+
+    <ion-item>
+      <button ion-button icon-only (click)="ChangePassword()">
+        Change Password
+      </button>
+    </ion-item>
+
+    <ion-item>
+      <button ion-button icon-only (click)="addchildpage()">
+         Add Child
+      </button>
+    </ion-item>
+    <ion-item>
+      <button ion-button icon-only (click)="goToCalendar()">
+         Add Child
+      </button>
+    </ion-item>
+  </ion-list>
+</ion-content>

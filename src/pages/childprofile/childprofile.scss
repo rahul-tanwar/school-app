@@ -1,0 +1,68 @@
+page-child-profile {
+
+    .bg-image{
+        background-image: url('../assets/imgs/Gradient-Phone-03.png');
+        background-repeat: repeat;
+        background-position: center;
+        background-size: contain;
+      }
+
+.aligncenter{
+    text-align: -webkit-center;
+}
+
+.border-Profile-grid{
+    margin-top: 15px;
+}
+
+.flt-left{
+    float: left;
+}
+.wd-50{
+    width: 50%;
+}
+.item-md .item-button{
+    padding: 0 0.6em;
+    height: 40px;
+    width: 100px;
+    font-size: 1.4rem;
+}
+
+.ion-md-bicycle{
+    margin-top: -50px;
+    font-size: 10.2em!important;
+    border: 3px solid;
+    border-radius: 52%;
+    width: 158px;
+    height: 159px;
+}
+.ion-md-sync, .ion-md-add-circle{
+    font-size: 3.2em!important;
+}
+
+.ion-md-add-circle{
+    float: right;
+}
+
+ion-label{
+    color: black!important;
+    font-weight: 500!important;;
+}
+
+ion-input{
+    border-bottom: 1px solid #000000;
+}
+
+.bg-color{
+    background: #f1f1f1;
+}
+
+.item-md .item-button{
+    background-color: #55acee;
+}
+
+.content-md {
+    color: #55acee;
+}
+
+}

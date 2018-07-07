@@ -1,2 +1,0 @@
-# school-app
-Ionic app 

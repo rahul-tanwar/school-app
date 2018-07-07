@@ -1,0 +1,52 @@
+<ion-header>
+    <ion-navbar color="event">
+        <ion-toolbar>
+            <ion-title>
+                Events
+            </ion-title>
+            <ion-buttons start>
+                <button ion-button (click)="dismiss()">
+                    <span ion-text color="primary" showWhen="ios">Cancel</span>
+                    <ion-icon name="md-close" showWhen="android, windows"></ion-icon>
+                </button>
+            </ion-buttons>
+        </ion-toolbar>
+    </ion-navbar>
+</ion-header>
+
+
+
+<ion-content padding class="bg-color">
+
+    <ion-item-group *ngFor="let group of eventGroup">
+        <ion-item>
+            <ion-item-divider>{{ group.date | date:'dd/MM/yyyy' }}</ion-item-divider>
+
+            <ion-card *ngFor="let event of group.events">
+                <ion-card-header class="custom-padding-5">
+                    <ion-grid>
+                        <ion-row>
+                            <ion-col col-9>
+                                <ion-icon name="camera" class="icon-js-custom"></ion-icon>
+                                <label class="activty-text-header">{{ event.Title }}</label>
+                            </ion-col>
+                            <ion-col col-3>
+                                <p class="tright">{{event.CreatedDate | date:'shortTime'}}</p>
+                            </ion-col>
+
+                        </ion-row>
+                    </ion-grid>
+                </ion-card-header>
+                <ion-card-content>
+                    <div class="event-content">
+                        <img *ngIf="event.ImageURL" [src]="event.ImageURL" width="400px" height="150px">
+                        <p *ngIf="event.Notes">
+                            {{event.Notes}}
+                        </p>
+                        <h3 class="view-btn" (click)="goToEventDetail(event)">View</h3>
+                    </div>
+                </ion-card-content>
+            </ion-card>
+        </ion-item>
+    </ion-item-group>
+</ion-content>

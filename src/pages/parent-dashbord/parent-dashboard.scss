@@ -1,0 +1,11 @@
+page-parent-dashboard {
+    .item-md{
+     //   background-color: #55acee;
+    }
+    .item-md.item-block .item-inner{
+        padding-right: 0px !important;
+    }
+    .item-md ion-avatar[item-start]{
+        margin: 0px 0px 0px 0; 
+    }
+}

@@ -1,0 +1,27 @@
+page-select-student {
+    ion-icon {
+        font-size: 2.6em;
+   }
+   .item-checkbox-img {
+    vertical-align: middle;
+    position: absolute;
+    top: 0px;
+    right: 15px;
+    height:100%;
+  }
+
+  .custom-bg:nth-of-type(even) {
+    background-color:#f4f4f4; 
+}
+.item-md{
+    padding-left:10px;
+}
+.item-md ion-avatar[item-left]{
+    margin:8px 8px 8px 0;
+}
+.header  .toolbar-background-md{background-color: #6db2ec  !important;color:#ffffff;}
+.header .toolbar-title-md{color:#ffffff;}
+.header .back-button{color:#ffffff;display: none;}
+[col-6], .col{padding: 0!important;}
+
+}

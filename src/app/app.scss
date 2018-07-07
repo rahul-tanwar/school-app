@@ -1,0 +1,4 @@
+.successToast { .toast-message { background: color($colors, secondary);opacity: 0.9;} }
+.errorToast { .toast-message {  background: color($colors, danger) ;opacity: 0.9; } }
+.warningToast {.toast-message {   background: color($colors, warning);opacity: 0.9; } }
+.infoToast {.toast-message {   background: color($colors, info);opacity: 0.9; } }

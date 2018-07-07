@@ -1,0 +1,41 @@
+page-welcome {
+.bg-image{
+    background-image: url('../assets/imgs/Gradient-Phone-03.png');
+    background-repeat: repeat;
+    background-position: center;
+    background-size: contain;
+  }
+  .bg-color{
+    background: #476592;
+}
+  .w100{
+      width: 100%;
+  }
+  
+  .p10{
+      padding: 10px;
+  }
+  .welcome-container .row-center img {
+    position:absolute;
+    left: 0;
+    right: 0;
+    margin:0 auto;
+    top:50%;
+    transform:translateY(-100%);
+  }
+  .welcome-container{
+    position:fixed;
+    left: 0;
+    right: 0;
+    margin:0 auto;
+    top:36%;
+  }
+  .mg-top20{
+    margin-top: 20px;
+  }
+
+  .login-button{
+      margin-bottom: 5px;
+      border:1px solid #ffffff;
+  }
+}

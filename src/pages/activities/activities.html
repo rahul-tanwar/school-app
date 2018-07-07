@@ -1,0 +1,39 @@
+<!-- <ion-header>
+  <ion-navbar >
+    <ion-title>Activity</ion-title>
+  </ion-navbar>
+</ion-header> -->
+
+
+<ion-content padding>
+
+
+    <ion-item-group *ngFor="let group of acitivitieGroup">
+        <ion-item>
+            <ion-item-divider color="light">{{ group.date | date:'dd/MM/yyyy' }}</ion-item-divider>
+            <ion-card *ngFor="let item of group.activities">
+                <ion-card-header class="custom-padding-5">
+                    <ion-grid>
+                        <ion-row>
+                            <ion-col col-9>
+                                <ion-icon name="camera" class="icon-js-custom"></ion-icon>
+                                <label class="activty-text-header pl5">{{item.ActivityName}}</label>
+                            </ion-col>
+                            <ion-col col-3>
+                                <p class="tright">{{item.ActivityDate | date:'shortTime'}}</p>
+                            </ion-col>
+
+                        </ion-row>
+                    </ion-grid>
+
+                </ion-card-header>
+                <ion-card-content>
+                    <img *ngIf="item.ImageURL" [src]="item.ImageURL" width="400px" height="150px">
+                    <p *ngIf="item.Notes">
+                        {{item.Notes}}
+                    </p>
+                </ion-card-content>
+            </ion-card>
+        </ion-item>
+    </ion-item-group>
+</ion-content>

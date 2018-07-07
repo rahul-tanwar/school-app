@@ -1,0 +1,14 @@
+<ion-header class="teacher-dashboad-header">
+    <ion-navbar>
+        <ion-title>
+            Dashboard
+            <span float-right><ion-icon name="more" (click)="presentPopover($event)"></ion-icon></span>
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <ion-tabs color="light" selectedIndex=0 tabsPlacement="bottom">
+        <ion-tab tabIcon="ios-create" tabTitle="Check-in" [root]="studentCheckinTab"></ion-tab>
+        <ion-tab tabIcon="ios-apps" tabTitle="Action" [root]="actionTab"></ion-tab>
+    </ion-tabs>
+</ion-content>

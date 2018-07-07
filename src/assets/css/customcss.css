@@ -1,0 +1,45 @@
+.custom-padding-5{padding:5px !important;}
+.activty-text-header{font-weight: 600;}
+.tright{text-align: right;}
+.color-green{color:green;}
+.padding-10{padding:10px !important;}
+.scroll-content{
+    padding:1px !important;
+}
+
+
+.teacher-dashboad-header .toolbar-background-md{background-color: #476592  !important;color:#ffffff;}
+.teacher-dashboad-header .toolbar-title-md{color:#ffffff;}
+
+.npadding.toolbar-md{padding:0 !important;min-height:auto !important;}
+.npadding.button-md{padding:0 !important; margin:0 !important;}
+.no-padd{padding:0 !important;}
+.center{text-align: center;}
+.no-padd .item-inner{padding-right:0 !important;}
+.no-padd .label-md {margin-right:0 !important;}
+
+.no-padd .item-md{
+    margin: 9px 0px 9px 0 !important;
+}
+
+ion-avatar.padding-b-10{padding-bottom: 10px;}
+.color-light-green{color:#20da6a  !important;}
+
+.tabs-md .tab-button[aria-selected=true] {
+    border-bottom: 2px solid #f71c59;
+}
+
+.action-sheet-md .action-sheet-button {border-bottom: 1px solid #d9e0e4 !important;}
+.action-sheet-md .action-sheet-group:first-child{ color:#000000 !important; 
+    padding-top:0 !important;background:#ffffff !important;}
+.action-sheet-md .action-sheet-group:last-child {padding-bottom:0!important;}
+.action-sheet-md .action-sheet-group:last-child .action-sheet-cancel{border-bottom: none !important; color:#ffffff !important; 
+    background-color:#92ef92;}
+
+    .wide-as-needed {
+        overflow: scroll;
+        white-space: nowrap;
+      }
+      .scroll { 
+        min-width: 100%;
+      }

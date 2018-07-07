@@ -1,0 +1,65 @@
+<ion-header>
+
+    <ion-navbar color="secondary">
+        <ion-title>Assignment Detail</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="bg-color">
+    <!-- <ion-grid>
+        <ion-row class="title">
+          <ion-col col-2> <ion-icon name="arrow-round-back" (click)="goToBack()"></ion-icon></ion-col>
+          <ion-col col-10><h3>Assignment Detail</h3></ion-col>
+          </ion-row>
+          </ion-grid> -->
+
+    <ion-card>
+        <ion-card-content>
+            <ion-grid>
+                <ion-row>
+                    <ion-col col-12>
+                        <p class="aligncenter color-gray">Sent {{ assignment.CreatedDate | date:'medium' }}</p>
+                    </ion-col>
+                    <ion-col col-12>
+                        <h2 class="assignmenttitle">{{ assignment.Title }} </h2>
+                    </ion-col>
+                    <ion-col col-12>
+                        <p>
+                            <b>When:</b> {{ assignment.NotificationDate | date:'medium' }}</p>
+                    </ion-col>
+                    <ion-col col-12 *ngIf="assignment.Notes">
+                        <p>
+                            <b> Notes:</b>
+                            <br/> {{assignment.Notes}}
+                        </p>
+                    </ion-col>
+                    <ion-col col-12 *ngIf="assignment.ImageURL">
+
+                        <b>Attachement:</b>
+                        <br/>
+                        <img [src]="assignment.ImageURL" width="400px" height="150px">
+                    </ion-col>
+                    <ion-col col-12 class="flex-container">
+                        <ion-label>To Be Completed</ion-label>
+                        <ion-toggle color="secondary" [(ngModel)]="assignment.Response" (ngModelChange)="sendResponse()"></ion-toggle>
+                        <p> Done
+                            <p>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+
+                </ion-row>
+            </ion-grid>
+
+        </ion-card-content>
+
+    </ion-card>
+
+
+
+
+
+
+</ion-content>

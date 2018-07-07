@@ -1,0 +1,81 @@
+page-notifications {
+    .bg-color{
+        background: #f1f1f1;
+    }
+    .icon-noty{
+        font-size: 2.5em;
+        position: absolute;
+        top: -16px;
+        left: -8px;
+    }
+
+    .h1-color{
+        color: #000000;
+        font-weight: 500;
+        padding-top: 15px;
+    }
+    .card-md{
+        position: relative;
+        margin-top: 0px;
+    }
+    ion-card{
+        overflow: visible!important;
+    }
+    .view-btn{
+        color: #075ff8;
+        font-weight: 400;
+        float: right;
+        margin-top: -17px;
+    }
+    
+    .circle {
+        width: 35px;
+        height: 35px;
+        background: #0e0e0e;
+        border-radius: 50px;
+        -moz-border-radius: 50px;
+        -webkit-border-radius: 50px;
+     }
+
+     .icon-noty-circle{
+        color: white;
+        position: absolute;
+        left: 13px;
+        top: 9px;
+      
+     }
+
+     .card-content-md {
+        padding: 4px 8px;
+       
+    }
+    ion-icon {
+         font-size: 1.1em;
+    }
+
+    .circle-assignment {
+        width: 35px;
+        height: 35px;
+        background: #32db64;
+        border-radius: 50px;
+        -moz-border-radius: 50px;
+        -webkit-border-radius: 50px;
+     }
+
+     .circle-notice {
+        width: 35px;
+        height: 35px;
+        background: #f53d3d;
+        border-radius: 50px;
+        -moz-border-radius: 50px;
+        -webkit-border-radius: 50px;
+     }
+     .circle-event {
+        width: 35px;
+        height: 35px;
+        background: #5e07eb;
+        border-radius: 50px;
+        -moz-border-radius: 50px;
+        -webkit-border-radius: 50px;
+     }
+}

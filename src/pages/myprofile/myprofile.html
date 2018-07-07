@@ -1,0 +1,61 @@
+<ion-header>
+    <ion-navbar color="secondary">
+        <ion-title>My Profile</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content padding class="bg-color">
+    <ion-card>
+        <ion-card-content>
+            <ion-list>
+                <ion-item>
+                    <ion-label floating>First Name</ion-label>
+                    <ion-input type="text" [(ngModel)]="teacher.FirstName"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label floating>Last Name</ion-label>
+                    <ion-input type="text" [(ngModel)]="teacher.LastName"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label floating>Email</ion-label>
+                    <ion-input type="email" [(ngModel)]="teacher.Email"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label floating>Password</ion-label>
+                    <ion-input type="text" [(ngModel)]="teacher.Email"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label floating>Phone</ion-label>
+                    <ion-input type="number" [(ngModel)]="teacher.ContactNumber"></ion-input>
+                </ion-item>
+                <ion-item class="flt-left wd-50">
+                    <ion-label floating>Gender</ion-label>
+                    <ion-select [(ngModel)]="teacher.Gender">
+                        <ion-option value="Male">Male</ion-option>
+                        <ion-option value="Female">Female</ion-option>
+                    </ion-select>
+                </ion-item>
+
+
+                <ion-item class="flt-left wd-50">
+                    <ion-label floating>Date of Birth</ion-label>
+                    <ion-datetime [(ngModel)]="teacher.DOB" displayFormat="MM/DD/YYYY"></ion-datetime>
+                </ion-item>
+
+                <div style="padding-left:20px">
+                    <button ion-button color="Default" (click)="updateProfile()">Update</button>
+                    <button ion-button color="light" (click)="goBack()">Cancel</button>
+                </div>
+            </ion-list>
+        </ion-card-content>
+
+    </ion-card>
+
+
+
+
+
+
+</ion-content>

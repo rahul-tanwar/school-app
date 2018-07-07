@@ -1,0 +1,23 @@
+page-notification-notice {
+    ion-icon {
+        font-size: 3em;
+   }
+   .item-checkbox-img {
+    vertical-align: middle;
+    position: absolute;
+    top: 0px;
+    right: 15px;
+    height:100%;
+  }
+
+  .header  .toolbar-background-md{background-color: #f8f8f8   !important;color:#000000;}
+  .header .toolbar-title-md{color:#000000;}
+  .header .back-button{color:#000000;}
+  .image-button{padding:20px 10px 20px 10px !important;border-radius: 5px;}
+  .image-button .icon{margin-right:10px;}
+  
+  .no-padding-left{padding-left: 0!important;}
+  .no-border-top{border-top: 0 !important;}
+  .no-padding-left .item-inner{padding-right:0!important}
+  .header-text{font-size:17px;color:#fa2; }
+}

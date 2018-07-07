@@ -1,0 +1,21 @@
+<ion-content padding class="bg-color">
+    <div margin class="welcome-container">
+
+        <ion-row>
+            <ion-col col-12>
+                <button class="login-button animated slideInUp" ion-button full color="light" (click)="goToLogin('Teacher')">
+                                    <ion-icon name="contacts" class="p10 animated fadeInLeft"></ion-icon>
+                                    Login as Teacher
+                                  </button>
+            </ion-col>
+            <ion-col col-12>
+                <button class="login-button animated slideInDown" full ion-button color="light" (click)="goToLogin('Parent')">
+                            <ion-icon name="contact" class="p10 animated fadeInLeft"></ion-icon>
+                            Login as Parent
+                          </button>
+
+            </ion-col>
+        </ion-row>
+    </div>
+
+</ion-content>

@@ -1,0 +1,41 @@
+<ion-content padding class="bg-color">
+    <ion-row>
+        <ion-col col-9>
+            <ion-item>
+                <ion-label floating>Class</ion-label>
+                <ion-select [(ngModel)]="selectedClass" interface="action-sheet" (ionChange)="getClassChilds($event)" class="custom-select">
+                    <ion-option *ngFor="let class of classes" [value]="class.ClassId">{{class.ClassName}}</ion-option>
+                </ion-select>
+
+            </ion-item>
+
+        </ion-col>
+
+        <ion-col col-3>
+
+            <ion-icon color="secondary" (click)="setStudentCheckin()" name="checkmark-circle-outline" style="margin-top:26px;padding-right:10px;float:right;"></ion-icon>
+
+
+        </ion-col>
+
+    </ion-row>
+
+    <ion-toolbar>
+        <ion-searchbar (input)="getItems($event)"></ion-searchbar>
+    </ion-toolbar>
+
+    <ion-list no-lines>
+        <ion-item *ngFor="let item of searchData" class="custom-bg">
+            <ion-avatar item-left>
+                <ion-icon name="contact"></ion-icon>
+            </ion-avatar>
+
+            <ion-label>{{item.Name}}</ion-label>
+            <ion-toggle color="secondary" [(ngModel)]="item.IsPresent" checked="{{item.IsPresent}}" item-righ></ion-toggle>
+
+
+        </ion-item>
+    </ion-list>
+
+
+</ion-content>

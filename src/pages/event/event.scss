@@ -1,0 +1,77 @@
+page-event {
+    .pad-left-0 {
+        padding-left: 0px;
+         }
+     .txt-color-light{
+         color: #b6b8b3;
+     }
+     .bg-image{
+         background-image: url('../assets/imgs/Gradient-Phone-03.png');
+         background-repeat: repeat;
+         background-position: center;
+         background-size: contain;
+       }
+       .bg-color{
+           background: #f1f1f1;
+       }
+       .h1-color{
+        color: #000000;
+        font-weight: 500;
+        padding-top: 15px;
+    }
+       ion-icon {
+        font-size: 1.2em !important;
+    }
+    .card-content-md {
+        padding: 5px 2px;
+     }
+     .icon-complete{
+         color: green;
+        font-size: 2.5em !important;
+     }
+     .float-right{
+         float: right;
+     }
+     .icon-noty-circle{
+        color: white;
+        position: absolute;
+        left: 14px;
+        top: 15px;
+      
+     }
+     .circle {
+        margin-top: 5px;
+        width: 40px;
+        height: 40px;
+        background: #5e07eb;
+        border-radius: 50px;
+        -moz-border-radius: 50px;
+        -webkit-border-radius: 50px;
+     }
+     .view-title {
+        background-color: #ffffff !important;
+    }
+    .view-btn{
+        color: #075ff8;
+        font-weight: 400;
+        float: right;
+        margin-top: -10px;
+    }
+    page-event .card-content-md {
+        padding: 0px !important;
+    }
+    .card-content-md{
+        padding: 0px !important;
+    }
+
+    .item-divider .label-md{
+        text-align: center;
+    }
+    .event-content{
+        padding: 0px 10px !important;
+    }
+
+    ion-card img{
+        margin-bottom: 8px;
+    }
+}

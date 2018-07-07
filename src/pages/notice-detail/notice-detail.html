@@ -1,0 +1,46 @@
+<ion-header>
+
+    <ion-navbar color="danger">
+        <ion-title>Notice Detail</ion-title>
+    </ion-navbar>
+
+</ion-header>
+<ion-content padding class="bg-color">
+
+    <ion-card>
+        <ion-card-content>
+            <ion-grid>
+                <ion-row>
+                    <ion-col col-12>
+                        <p class="aligncenter color-gray">Sent {{ notice.CreatedDate | date:'medium' }}</p>
+                    </ion-col>
+                    <ion-col col-12>
+                        <h2 class="assignmenttitle">{{ notice.Title }} </h2>
+                    </ion-col>
+                    <ion-col col-12 *ngIf="notice.Notes">
+                        <p>
+                            <b> Notes:</b>
+                            <br/> {{ notice.Notes}}
+                        </p>
+                    </ion-col>
+                    <ion-col col-12 *ngIf="notice.ImageURL">
+                        <p>
+                            <b>Attachement:</b>
+                            <br/>
+                            <img [src]="notice.ImageURL" width="400px" height="150px">
+                    </ion-col>
+
+
+                </ion-row>
+            </ion-grid>
+
+        </ion-card-content>
+
+    </ion-card>
+
+
+
+
+
+
+</ion-content>

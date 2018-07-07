@@ -1,0 +1,47 @@
+<!--
+  Generated template for the ProfilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar color="twitter">
+        <ion-title>Add Child</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="bg-color">
+
+    <ion-card>
+
+        <ion-card-content>
+
+            <ion-item>
+                <ion-label floating>Child Id</ion-label>
+                <ion-input type="text" [(ngModel)]="childId"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label floating>Child code</ion-label>
+                <ion-input type="text" [(ngModel)]="childCode"></ion-input>
+            </ion-item>
+
+            <br>
+            <br>
+            <ion-note item-start>
+                *Contact your Kids School for Child Code
+            </ion-note>
+
+        </ion-card-content>
+
+    </ion-card>
+
+</ion-content>
+<ion-footer no-shadow>
+    <ion-toolbar position="bottom" class="npadding">
+        <button class="npadding" color="secondary" full ion-button (click)="addChild()">Add Child</button>
+    </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,21 @@
+<ion-header>
+
+    <ion-navbar color="twitter">
+        <ion-title>Welcome
+            <span float-right>
+                <ion-icon name="more" (click)="presentPopover($event)"></ion-icon>
+            </span>
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content padding class="bg-color">
+
+    <ion-tabs color="light">
+        <ion-tab tabIcon="podium" tabTitle="Activity" [root]="activityTab"></ion-tab>
+        <ion-tab tabIcon="diary" tabTitle="diary" [root]="notificationTab"></ion-tab>
+        <ion-tab tabIcon="calendar" tabTitle="Calender" [root]="clalenderTab"></ion-tab>
+    </ion-tabs>`
+
+</ion-content>

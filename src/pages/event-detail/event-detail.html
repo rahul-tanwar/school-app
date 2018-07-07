@@ -1,0 +1,57 @@
+<ion-header>
+
+    <ion-navbar color="event">
+        <ion-title>Event Detail</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+
+<ion-content padding class="bg-color">
+
+    <ion-card>
+        <ion-card-content>
+            <ion-grid>
+                <ion-row>
+                    <ion-col col-12>
+                        <p class="aligncenter color-gray">Sent {{ event.CreatedDate | date:'medium' }}</p>
+                    </ion-col>
+                    <ion-col col-12>
+                        <h2 class="assignmenttitle"> {{ event.Title }} </h2>
+                    </ion-col>
+                    <ion-col col-12>
+                        <p>
+                            <b>When:</b> {{ event.NotificationDate | date:'medium' }} </p>
+                    </ion-col>
+                    <ion-col col-12 *ngIf="event.Notes">
+                        <p>
+                            <b> Notes:</b>
+                            <br/> {{ event.Notes}}
+                        </p>
+                    </ion-col>
+                    <ion-col col-12 *ngIf="event.ImageURL">
+                        <p>
+                            <b>Attachement:</b>
+                            <br/>
+                            <img [src]="event.ImageURL" width="400px" height="150px">
+                    </ion-col>
+                    <ion-col col-12 class="flex-container">
+                        <ion-label>Would You Join ? </ion-label>
+                        <ion-toggle color="secondary" [(ngModel)]="event.Response" (ngModelChange)="sendResponse()"></ion-toggle>
+                        <p> Done
+                            <p>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+
+        </ion-card-content>
+
+    </ion-card>
+
+
+
+
+
+
+</ion-content>
