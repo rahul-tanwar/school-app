@@ -2,13 +2,13 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { NotificationService } from '../../shared/services/NotificationService';
 import { UIHelper } from '../../shared/Helper/UIHelper';
-import { StudentActivity } from '../../shared/models/StudentActivity';
+//import { StudentActivity } from '../../shared/models/StudentActivity';
 import { NotificationDetails, NotificationType } from '../../shared/models/Notifications';
 import { Messages } from '../../shared/Helper/Messages';
 
 import { DataHelper } from '../../shared/Helper/DataHelper';
 import { ACTIVITY, TOAST, NOTIFICATION } from '../../shared/Enums';
-import { ActivityType, ActivitySubType, ActivitySubTypeChild } from '../../shared/models/Activity';
+//import { ActivityType, ActivitySubType, ActivitySubTypeChild } from '../../shared/models/Activity';
 import { ResponseModel } from '../../shared/models/ResponseModel';
 
 import { CameraHelper } from '../../shared/Helper/CameraHelper';
@@ -31,6 +31,7 @@ export class NotificationEventPage {
     base64ImageUrl: string;
     toast = TOAST;
     Notes: string;
+    Title: string;
     activityEnum = ACTIVITY;
     notificationTypeEnum = NOTIFICATION;
 
@@ -68,6 +69,7 @@ export class NotificationEventPage {
     setActivityDetails() {
         let myMoment = moment(this.selectedDate);
         let time = moment(this.selectedTime).format("hh:mm A");
+        this.notificationDetails.Title = this.Title;
         this.notificationDetails.Notes = this.Notes;
         this.notificationDetails.ImageType = "jpeg";
         this.notificationDetails.ImageStr = this.base64ImageUrl;

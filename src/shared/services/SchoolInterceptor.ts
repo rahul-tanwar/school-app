@@ -11,7 +11,7 @@ export class SchoolInterceptor implements HttpInterceptor {
     }
 
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-        if (!request.url.includes('http://schoolapi.anaghaenterprises.in/token')) {
+        if (!request.url.includes('http://schoolapi.anaghaenterprises.in/token') && !request.url.includes('http://schoolapi.anaghaenterprises.in/api/account/forgotpassword')) {
             var token = LoginStaticData.UserInfo.access_token;
             request = request.clone({
                 setHeaders: {

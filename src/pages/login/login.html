@@ -14,7 +14,7 @@
                     <ion-list>
                         <ion-item>
                             <ion-label floating>Email</ion-label>
-                            <ion-input formControlName="email" value="sudrikmangesh@gmail.com" type="email" [class.invalid]="!loginForm.controls.email.valid && blur">
+                            <ion-input formControlName="email" value="teacherone@mail.com" type="email" [class.invalid]="!loginForm.controls.email.valid && blur">
                             </ion-input>
                         </ion-item>
                         <ion-item class="error-message" *ngIf="!loginForm.controls.email.valid &&
@@ -37,7 +37,7 @@
 
                         </ion-item>
                         <ion-item class="aligncenter">
-                            <button ion-button round (click)="goToResetPassword()" style="color:white">
+                            <button type="button" ion-button round (click)="goToResetPassword()" style="color:white">
                                 Forgot
                             </button>
 

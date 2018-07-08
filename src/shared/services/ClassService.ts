@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { BaseService } from './BaseService';
 import { Observable } from 'rxjs/Observable';
 import { catchError } from 'rxjs/operators';
-import { StudentCheckin } from '../models/Students';
+import { StudentCheckin, StudentCheckout } from '../models/Students';
 import { HttpParams } from '@angular/common/http';
 import { LoginStaticData } from '../models/LoginStaticData';
 
@@ -14,11 +14,11 @@ export class ClassService extends BaseService {
         this.initilize(JSON.parse(data));
 
         let schoolId = LoginStaticData.UserInfo.SchoolInfoId;
-
+        let staffUserId= LoginStaticData.UserInfo.UserId;
         this.httpParams = new HttpParams();
         this.httpParams.set('schoolInfoId', schoolId);
 
-        return this.httpClient.get(this.baseUrl + 'class/getallclassBySchoolInfoId?schoolInfoId=' + schoolId,
+        return this.httpClient.get(this.baseUrl + 'class/getallclassBystaffuserid?staffUserId=' + staffUserId,
             { headers: this.httpOptions })
             .pipe(catchError(this.handleError));
     }
@@ -32,12 +32,15 @@ export class ClassService extends BaseService {
     }
 
     public setStudentCheckin(student: Array<StudentCheckin>): Observable<object> {
-
         return this.httpClient.post(this.baseUrl + 'class/insertupdatestudentcheckininfo',
             student, this.httpOptions)
             .pipe(catchError(this.handleError));
     }
 
-
+    public setStudentCheckOut(student: Array<StudentCheckout>): Observable<object> {
+        return this.httpClient.post(this.baseUrl + 'class/insertupdatestudentcheckoutinfo',
+            student, this.httpOptions)
+            .pipe(catchError(this.handleError));
+    }
 
 }

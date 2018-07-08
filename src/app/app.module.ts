@@ -15,6 +15,8 @@ import { WelcomePageModule } from '../pages/welcome/welcome.module';
 
 import { ProfilePageModule } from "../pages/profile/profile.module";
 import { ProfilePage } from "../pages/profile/profile";
+import { TeacherProfilePageModule } from "../pages/teacher-profile/teacher-profile.module";
+import { TeacherProfilePage } from "../pages/teacher-profile/teacher-profile";
 
 import { ParentDashboardPageModule } from "../pages/parent-dashbord/parent-dashboard.module";
 import { ParentDashboardPage } from "../pages/parent-dashbord/parent-dashboard";
@@ -61,6 +63,7 @@ import { UIHelper } from '../shared/Helper/UIHelper';
         TeacherDashboardPageModule,
         MenuTeacherPageModule,
         ProfilePageModule,
+        TeacherProfilePageModule,
         HttpModule,
         HttpClientModule,
         ParentMenuPageModule,
@@ -76,6 +79,7 @@ import { UIHelper } from '../shared/Helper/UIHelper';
         TeacherDashboardPage,
         MenuTeacherPage,
         ProfilePage,
+        TeacherProfilePage,
         ParentMenuPage,
         AddFirstChildPage
     ],

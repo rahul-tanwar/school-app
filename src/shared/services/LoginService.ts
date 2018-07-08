@@ -3,21 +3,18 @@ import { BaseService } from './BaseService';
 import { Observable } from 'rxjs/Observable';
 import { catchError } from 'rxjs/operators';
 import { User } from '../models/User';
-import { HttpClient, HttpHeaders, HttpParams, HttpErrorResponse } from '@angular/common/http';
+import { HttpHeaders, HttpParams, HttpErrorResponse } from '@angular/common/http';
 import { ErrorObservable } from 'rxjs/observable/ErrorObservable';
 import { LoginStaticData } from '../models/LoginStaticData';
 
 @Injectable()
-export class LoginService {
+export class LoginService extends BaseService {
     httpOptions: any;
     loginUrl = 'http://schoolapi.anaghaenterprises.in/token';
     httpParams: HttpParams;
 
-    constructor(public baseService: BaseService, protected httpClient: HttpClient) {
-
-    }
+     
     public getToken(username: string, password: string): Observable<object> {
-
         this.httpOptions = new HttpHeaders({
             'Content-Type': 'application/x-www-form-urlencoded',
             'Accept': '*/*'
@@ -34,7 +31,7 @@ export class LoginService {
     }
 
     public initilizeBase(userInfo: User) {
-        this.baseService.initilize(userInfo);
+        this.initilize(userInfo);
     }
 
 
@@ -46,17 +43,24 @@ export class LoginService {
             if (LoginStaticData.UserInfo.AppSelectedStudent > 0) {
                 return "ParentDashboardPage";
             } else {
-                return "AddChildPage";
+                return "AddFirstChildPage";
             }
         }
 
         else {
             return "LoginPage";
         }
+    } 
+
+    public forgotPassword(EmailAddress: string): Observable<object> {
+        return this.httpClient.post(this.baseUrl + 'account/forgotpassword',
+        {EmailAddress:EmailAddress})
+            .pipe(catchError(this.handleError));
     }
 
 
     protected handleError(error: HttpErrorResponse) {
+        console.log(error.error);
         return new ErrorObservable(error.error);
     }
 }

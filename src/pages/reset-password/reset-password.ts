@@ -4,21 +4,22 @@ import {
     AlertController, IonicPage, NavController
 } from 'ionic-angular';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { AuthProvider } from '../../providers/auth/auth';
+import { LoginService } from '../../shared/services/LoginService';
 import { EmailValidator } from '../../validators/email';
-
+import { UIHelper } from '../../shared/Helper/UIHelper';
 
 @IonicPage()
 @Component({
     selector: 'page-reset-password',
     templateUrl: 'reset-password.html',
+    providers: [UIHelper]
 })
 export class ResetPasswordPage {
     public resetPasswordForm: FormGroup;
     constructor(
         public navCtrl: NavController,
-        public authProvider: AuthProvider,
-        public alertCtrl: AlertController,
+        private loginService: LoginService,
+        private UiHelper: UIHelper,
         formBuilder: FormBuilder
     ) {
         this.resetPasswordForm = formBuilder.group({
@@ -30,37 +31,20 @@ export class ResetPasswordPage {
     }
 
     resetPassword(): void {
-        if (!this.resetPasswordForm.valid) {
-            console.log(
-                `Form is not valid yet, current value: ${this.resetPasswordForm.value}`
-            );
-        } else {
-            const email: string = this.resetPasswordForm.value.email;
-            this.authProvider.resetPassword(email).then(
-                user => {
-                    const alert: Alert = this.alertCtrl.create({
-                        message: 'Check your email for a password reset link',
-                        buttons: [
-                            {
-                                text: 'Ok',
-                                role: 'cancel',
-                                handler: () => {
-                                    this.navCtrl.pop();
-                                }
-                            }
-                        ]
-                    });
-                    alert.present();
-                },
-                error => {
-                    const errorAlert = this.alertCtrl.create({
-                        message: error.message,
-                        buttons: [{ text: 'Ok', role: 'cancel' }]
-                    });
-                    errorAlert.present();
+        this.UiHelper.ShowSpinner();
+        this.loginService.forgotPassword(this.resetPasswordForm.value.email)
+            .subscribe((result: any) => {
+                this.UiHelper.HideSpinner();
+                if (!!result) {
+                    this.UiHelper.ShowAlert("Forgot Password", "Password sent to your email address successfully.");
+                } else {
+                    this.UiHelper.ShowAlert("Forgot Password", "Error");
                 }
-            );
-        }
+            }, (error1: any) => {
+                this.UiHelper.HideSpinner();
+                this.UiHelper.ShowAlert("Forgot Password", "Inavlid Email address");
+            });
     }
 
+     
 }

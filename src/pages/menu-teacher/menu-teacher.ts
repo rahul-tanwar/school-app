@@ -20,8 +20,8 @@ export class MenuTeacherPage {
     }
 
     myprofile() {
-        this.viewCtrl.dismiss();
-        this.UiHelper.OpenPage("MyProfilePage");
+        //this.viewCtrl.dismiss();
+        this.UiHelper.OpenPage("TeacherProfilePage"); 
     }
 
     goback() {

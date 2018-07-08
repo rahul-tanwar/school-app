@@ -26,6 +26,7 @@ export class NotificationDetails {
     DocType: string;
     DocURL: string;
     Notes: string;
+    Title: string;
     NotificationType: NotificationType;
     ClassId: number;
     SchoolInfoId: number;

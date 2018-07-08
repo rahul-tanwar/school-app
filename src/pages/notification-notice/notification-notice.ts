@@ -31,6 +31,7 @@ export class NotificationNoticePage {
     base64ImageUrl: string;
     toast = TOAST;
     Notes: string;
+    Title: string;
     activityEnum = ACTIVITY;
     notificationTypeEnum = NOTIFICATION;
 
@@ -68,6 +69,7 @@ export class NotificationNoticePage {
     setActivityDetails() {
         let myMoment = moment(this.selectedDate);
         let time = moment(this.selectedTime).format("hh:mm A");
+        this.notificationDetails.Title = this.Title;
         this.notificationDetails.Notes = this.Notes;
         this.notificationDetails.ImageType = "jpeg";
         this.notificationDetails.ImageStr = this.base64ImageUrl;
