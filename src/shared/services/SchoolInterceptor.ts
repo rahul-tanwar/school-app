@@ -1,4 +1,4 @@
-import { Injectable, Injector } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { HttpRequest, HttpHandler, HttpEvent, HttpInterceptor } from '@angular/common/http';
 import { LoginStaticData } from '../models/LoginStaticData';
 import { Observable } from 'rxjs/Observable';
@@ -6,7 +6,7 @@ import { Observable } from 'rxjs/Observable';
 @Injectable()
 export class SchoolInterceptor implements HttpInterceptor {
 
-    constructor(private injector: Injector) {
+    constructor() {
 
     }
 

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
 import { AddChildPage } from "../add-child/add-child";
-import { AddFirstChildPage } from "../add-first-child/add-first-child";
+//import { AddFirstChildPage } from "../add-first-child/add-first-child";
 import { UIHelper } from '../../shared/Helper/UIHelper';
 import { StudentService } from '../../shared/services/StudentService';
 import { ParentService } from '../../shared/services/ParentService'

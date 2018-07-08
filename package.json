@@ -66,7 +66,8 @@
         "CAMERA_USAGE_DESCRIPTION": "for activity",
         "PHOTOLIBRARY_USAGE_DESCRIPTION": "for activity"
       },
-      "com.telerik.plugins.nativepagetransitions": {}
+      "com.telerik.plugins.nativepagetransitions": {},
+      "com-sarriaroman-photoviewer": {}
     },
     "platforms": [
       "android"

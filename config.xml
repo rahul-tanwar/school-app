@@ -89,4 +89,5 @@
     </plugin>
     <plugin name="com.telerik.plugins.nativepagetransitions" spec="^0.6.5" />
     <engine name="android" spec="^6.3.0" />
+    <plugin name="com-sarriaroman-photoviewer" spec="^1.1.18" />
 </widget>

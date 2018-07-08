@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, App } from 'ionic-angular';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { StudentService } from '../../shared/services/StudentService';
 import { ClassService } from '../../shared/services/ClassService';
 import { Class } from '../../shared/models/Class';
@@ -237,7 +237,7 @@ export class SelectStudentPage {
         studentActivity.StaffId = parseInt(LoginStaticData.UserInfo.UserId);
         studentActivity.SchoolInfoId = parseInt(LoginStaticData.UserInfo.SchoolInfoId);
 
-        let studentIds: number[] = [];
+        //let studentIds: number[] = [];
         this.searchData.forEach(element => {
             if (element.IsPresent) {
                 studentActivity.StudentIds.push(element.StudentId);
@@ -277,7 +277,7 @@ export class SelectStudentPage {
 
 
 
-        let studentIds: number[] = [];
+        //let studentIds: number[] = [];
         this.searchData.forEach(element => {
             if (element.IsPresent) {
                 notificationDetails.StudentIds.push(element.StudentId);

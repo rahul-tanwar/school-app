@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { LoginStaticData } from '../../shared/models/LoginStaticData';
+//import { LoginStaticData } from '../../shared/models/LoginStaticData';
 import { TeacherProfile } from '../../shared/models/TeacherProfile';
 import { TeacherAccountService } from '../../shared/services/TecherAccountService';
 import { UIHelper } from '../../shared/Helper/UIHelper';
 import { ResponseModel } from '../../shared/models/ResponseModel';
 import { Messages } from '../../shared/Helper/Messages';
-import { TOAST, ACTIVITY } from '../../shared/Enums';
+import { TOAST } from '../../shared/Enums';
 
 @IonicPage()
 @Component({

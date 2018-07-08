@@ -14,7 +14,7 @@
                     <ion-list>
                         <ion-item>
                             <ion-label floating>Email</ion-label>
-                            <ion-input formControlName="email" value="teacherone@mail.com" type="email" [class.invalid]="!loginForm.controls.email.valid && blur">
+                            <ion-input formControlName="email" value="" type="email" [class.invalid]="!loginForm.controls.email.valid && blur">
                             </ion-input>
                         </ion-item>
                         <ion-item class="error-message" *ngIf="!loginForm.controls.email.valid &&
@@ -24,7 +24,7 @@
 
                         <ion-item>
                             <ion-label floating>Password</ion-label>
-                            <ion-input formControlName="password" value="123456" type="password" [class.invalid]="!loginForm.controls.password.valid && blur">
+                            <ion-input formControlName="password" value="" type="password" [class.invalid]="!loginForm.controls.password.valid && blur">
                             </ion-input>
                         </ion-item>
                         <ion-item class="error-message" *ngIf="!loginForm.controls.password.valid

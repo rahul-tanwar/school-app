@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import {
-    Alert,
-    AlertController, IonicPage, NavController
+    
+     IonicPage, NavController
 } from 'ionic-angular';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { LoginService } from '../../shared/services/LoginService';

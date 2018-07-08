@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { BaseService } from './BaseService';
 import { Observable } from 'rxjs/Observable';
 import { catchError } from 'rxjs/operators';
-import { HttpParams } from '@angular/common/http';
+//import { HttpParams } from '@angular/common/http';
 import { LoginStaticData } from '../models/LoginStaticData';
 import { TeacherProfile } from '../models/TeacherProfile';
 

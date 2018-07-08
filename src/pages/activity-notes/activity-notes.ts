@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { StudentService } from '../../shared/services/StudentService';
 import { UIHelper } from '../../shared/Helper/UIHelper';
 import { CameraHelper } from '../../shared/Helper/CameraHelper';
-import { StudentActivity, SelectedStudent } from '../../shared/models/StudentActivity';
+import { StudentActivity } from '../../shared/models/StudentActivity';
 import { Messages } from '../../shared/Helper/Messages';
 import { TOAST, ACTIVITY } from '../../shared/Enums';
 import { DataHelper } from '../../shared/Helper/DataHelper';

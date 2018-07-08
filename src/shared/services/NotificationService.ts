@@ -4,7 +4,7 @@ import { Observable } from 'rxjs/Observable';
 import { catchError } from 'rxjs/operators';
 import { HttpParams } from '@angular/common/http';
 import { LoginStaticData } from '../models/LoginStaticData';
-import { NotificationDetails, NotificationType, Notification } from '../models/Notifications';
+import { NotificationDetails, Notification } from '../models/Notifications';
 
 @Injectable()
 export class NotificationService extends BaseService {

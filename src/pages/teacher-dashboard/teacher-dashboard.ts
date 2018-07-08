@@ -7,8 +7,8 @@ import { MenuTeacherPage } from "./../menu-teacher/menu-teacher";
 import { UIHelper } from '../../shared/Helper/UIHelper';
 import { ActivityService } from '../../shared/services/ActivityService';
 import { NotificationService } from '../../shared/services/NotificationService';
-import { ActivityType, ActivitySubType, ActivitySubTypeChild } from '../../shared/models/Activity';
-import { NotificationDetails, NotificationType } from '../../shared/models/Notifications';
+import { ActivityType } from '../../shared/models/Activity';
+import {  NotificationType } from '../../shared/models/Notifications';
 import { DataHelper } from '../../shared/Helper/DataHelper';
 
 @IonicPage()
@@ -24,7 +24,7 @@ export class TeacherDashboardPage {
     constructor(public navCtrl: NavController, public navParams: NavParams,
         private changeDetectorRef: ChangeDetectorRef,
         private popoverCtrl: PopoverController,
-        private UiHelper: UIHelper, private dataHelper: DataHelper,
+        private UiHelper: UIHelper,
         public activityService: ActivityService, private notificationService: NotificationService) {
         this.studentCheckinTab = StudentCheckInPage;
         this.studentCheckoutTab=StudentCheckOutPage;

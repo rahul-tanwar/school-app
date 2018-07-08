@@ -31,7 +31,7 @@ import { ActivityService } from '../shared/services/ActivityService';
 import { LoginService } from '../shared/services/LoginService';
 import { StudentService } from '../shared/services/StudentService';
 import { NotificationService } from '../shared/services/NotificationService';
-import { ImagePicker } from '@ionic-native/image-picker';
+//import { ImagePicker } from '@ionic-native/image-picker';
 import { Calendar } from '@ionic-native/calendar';
 import { EscapeHtmlPipe } from '../component/pipes/keep-html.pipe';
 import { Messages } from '../shared/Helper/Messages';
@@ -46,7 +46,7 @@ import { ParentService } from '../shared/services/ParentService';
 import { ChildService } from '../shared/services/ChildService';
 import { ParentMenuPage } from '../pages/parent-menu/parent-menu';
 import { ParentMenuPageModule } from '../pages/parent-menu/parent-menu.module';
-import { UIHelper } from '../shared/Helper/UIHelper';
+//import { UIHelper } from '../shared/Helper/UIHelper';
 import { PhotoViewer } from '@ionic-native/photo-viewer';
 
 @NgModule({

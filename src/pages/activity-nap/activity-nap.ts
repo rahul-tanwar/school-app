@@ -7,7 +7,7 @@ import { Messages } from '../../shared/Helper/Messages';
 import { CameraHelper } from '../../shared/Helper/CameraHelper';
 import { DataHelper } from '../../shared/Helper/DataHelper';
 import { ACTIVITY, TOAST } from '../../shared/Enums';
-import { ActivityType, ActivitySubType, ActivitySubTypeChild } from '../../shared/models/Activity';
+import { ActivityType, ActivitySubType } from '../../shared/models/Activity';
 import { ResponseModel } from '../../shared/models/ResponseModel';
 import * as moment from 'moment';
 

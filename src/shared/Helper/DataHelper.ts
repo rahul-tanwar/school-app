@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { ActivityType, ActivitySubType, ActivitySubTypeChild } from '../models/Activity';
-import { NotificationDetails, NotificationType } from '../models/Notifications';
+import { NotificationType } from '../models/Notifications';
 
 @Injectable()
 export class DataHelper {

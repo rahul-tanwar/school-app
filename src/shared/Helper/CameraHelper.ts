@@ -1,7 +1,7 @@
 import { Camera, CameraOptions } from '@ionic-native/camera';
-import { ACTIVITY, TOAST } from '../../shared/Enums';
+import {  TOAST } from '../../shared/Enums';
 import { UIHelper } from '../../shared/Helper/UIHelper';
-import { Observable } from 'rxjs/Observable';
+//import { Observable } from 'rxjs/Observable';
 import { Injectable } from '@angular/core';
 
 @Injectable()
