@@ -47,6 +47,7 @@ import { ChildService } from '../shared/services/ChildService';
 import { ParentMenuPage } from '../pages/parent-menu/parent-menu';
 import { ParentMenuPageModule } from '../pages/parent-menu/parent-menu.module';
 import { UIHelper } from '../shared/Helper/UIHelper';
+import { PhotoViewer } from '@ionic-native/photo-viewer';
 
 @NgModule({
     declarations: [
@@ -99,6 +100,7 @@ import { UIHelper } from '../shared/Helper/UIHelper';
         NativePageTransitions,
         ParentService,
         ChildService,
+        PhotoViewer,
         Messages,
         {
             provide: HTTP_INTERCEPTORS,

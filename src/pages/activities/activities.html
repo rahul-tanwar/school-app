@@ -28,7 +28,7 @@
 
                 </ion-card-header>
                 <ion-card-content>
-                    <img *ngIf="item.ImageURL" [src]="item.ImageURL" width="400px" height="150px">
+                    <img *ngIf="item.ImageURL" [src]="item.ImageURL" width="400px" height="150px" (click)="imagePreview(item.ImageURL)">
                     <p *ngIf="item.Notes">
                         {{item.Notes}}
                     </p>
