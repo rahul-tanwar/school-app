@@ -44,5 +44,5 @@ export class ChangePasswordPage {
             this.uIHelper.showToast(error.error, this.toast.ERROR);
         });
     }
- 
+
 }

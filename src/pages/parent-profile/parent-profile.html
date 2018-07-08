@@ -2,56 +2,48 @@
     <ion-card>
 
         <ion-card-content>
-            <ion-grid class="border-Profile-grid">
-                <ion-row>
-                    <!-- <ion-col col-12 class="aligncenter">
+            <!-- <ion-col col-12 class="aligncenter">
                         <ion-icon name="contact"></ion-icon>
                     </ion-col> -->
-                    <ion-col col-12>
-                        <form novalidate #updateparentform="ngForm" (ngSubmit)="save()">
-                            <ion-list>
+            <form novalidate #updateparentform="ngForm" (ngSubmit)="save()">
 
-                                <ion-item>
-                                    <ion-label floating>First Name</ion-label>
-                                    <ion-input type="text" name="FirstName" [(ngModel)]="parent.FirstName" required></ion-input>
-                                </ion-item>
-                                <ion-item>
-                                    <ion-label floating>Last Name</ion-label>
-                                    <ion-input type="text" name="LastName" [(ngModel)]="parent.LastName" required></ion-input>
-                                </ion-item>
+                <ion-item>
+                    <ion-label floating>First Name</ion-label>
+                    <ion-input type="text" name="FirstName" [(ngModel)]="parent.FirstName" required></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label floating>Last Name</ion-label>
+                    <ion-input type="text" name="LastName" [(ngModel)]="parent.LastName" required></ion-input>
+                </ion-item>
 
-                                <ion-item class="">
-                                    <ion-label floating>Gender</ion-label>
-                                    <ion-select name="Gender" [(ngModel)]="parent.Gender" required>
-                                        <ion-option value="1">Male</ion-option>
-                                        <ion-option value="2">Female</ion-option>
-                                    </ion-select>
-                                </ion-item>
+                <ion-item>
+                    <ion-label floating>Gender</ion-label>
+                    <ion-select name="Gender" [(ngModel)]="parent.Gender" required>
+                        <ion-option value="1">Male</ion-option>
+                        <ion-option value="2">Female</ion-option>
+                    </ion-select>
+                </ion-item>
 
-                                <ion-item>
-                                    <ion-label floating>Email</ion-label>
-                                    <ion-input type="email" name="Email" [(ngModel)]="parent.Email" disabled></ion-input>
-                                </ion-item>
+                <ion-item>
+                    <ion-label floating>Email</ion-label>
+                    <ion-input type="email" name="Email" [(ngModel)]="parent.Email" disabled></ion-input>
+                </ion-item>
 
-                                <ion-item>
-                                    <ion-label floating>Mobile Number</ion-label>
-                                    <ion-input type="text" name="MobileNumber" [(ngModel)]="parent.MobileNumber" required></ion-input>
-                                </ion-item>
+                <ion-item>
+                    <ion-label floating>Mobile Number</ion-label>
+                    <ion-input type="text" name="MobileNumber" [(ngModel)]="parent.MobileNumber" required></ion-input>
+                </ion-item>
 
-                                <ion-item>
-                                    <ion-label floating>Phone</ion-label>
-                                    <ion-input type="text" name="ContactNumber" [(ngModel)]="parent.ContactNumber"></ion-input>
-                                </ion-item>
+                <ion-item>
+                    <ion-label floating>Phone</ion-label>
+                    <ion-input type="text" name="ContactNumber" [(ngModel)]="parent.ContactNumber"></ion-input>
+                </ion-item>
 
-                                <div style="padding-left:20px">
-                                    <button full ion-button color="Default" style="margin-top: 12px" [disabled]="!updateparentform.form.valid">Update</button>
-                                </div>
-                            </ion-list>
-                        </form>
-                    </ion-col>
-                </ion-row>
-            </ion-grid>
+                <ion-item>
+                    <button full ion-button round color="Default" style="margin-top: 12px" [disabled]="!updateparentform.form.valid">Update</button>
+                </ion-item>
+
+            </form>
         </ion-card-content>
-
     </ion-card>
 </ion-content>

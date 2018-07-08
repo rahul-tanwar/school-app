@@ -53,7 +53,7 @@ export class ChildProfilePage {
             if (!!result) {
                 this.student = result;
             }
-        }, (error) => {
+        }, () => {
         });
     }
 
@@ -67,8 +67,10 @@ export class ChildProfilePage {
     switchChild(): void {
         const childId = this.childIds.find(id => id !== parseInt(LoginStaticData.UserInfo.AppSelectedStudent.toString()));
         this.parentService.updateParentSelectedStudent(childId, LoginStaticData.UserInfo.UserId as any).subscribe((result: boolean) => {
-            LoginStaticData.UserInfo.AppSelectedStudent = childId;
-            this.uIHelper.refreshAppData(childId as any);
+            if (result) {
+                LoginStaticData.UserInfo.AppSelectedStudent = childId;
+                this.uIHelper.refreshAppData(childId as any);
+            }
         });
     }
 

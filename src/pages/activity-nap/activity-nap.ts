@@ -138,7 +138,7 @@ export class ActivityNapPage {
                         this.UiHelper.showToast(Messages.UnableToSave, this.toast.WARNING);
                     }
                 }
-            }, (error1: any) => {
+            }, () => {
                 this.UiHelper.HideSpinner();
                 this.UiHelper.showToast(Messages.Error, this.toast.ERROR);
             });

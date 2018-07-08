@@ -62,17 +62,18 @@ export class ActivitiesPage {
                 this.groupActivityData();
             }
             this.uIHelper.HideSpinner();
-        }, (error) => {
+        }, () => {
             this.uIHelper.HideSpinner();
         });
     }
 
-    imagePreview(imgURL:string){
+    imagePreview(imgURL: string) {
         this.photoViewer.show(imgURL);
     }
 
 
     private groupActivityData() {
+        this.acitivitieGroup = [];
         this.activities.forEach((activity: Activity) => {
             const index = this.acitivitieGroup.findIndex((item) => moment(item.date).isSame(moment(activity.ActivityDate), 'day'));
             if (index > -1) {

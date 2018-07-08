@@ -11,9 +11,6 @@ page-child-profile {
     text-align: -webkit-center;
 }
 
-.border-Profile-grid{
-    margin-top: 15px;
-}
 
 .flt-left{
     float: left;
@@ -30,14 +27,15 @@ page-child-profile {
 
 .ion-md-bicycle{
     margin-top: -50px;
-    font-size: 10.2em!important;
+    font-size: 5em !important;
     border: 3px solid;
     border-radius: 52%;
-    width: 158px;
-    height: 159px;
+    width: 80px;
+    height: 80px;
 }
 .ion-md-sync, .ion-md-add-circle{
-    font-size: 3.2em!important;
+    font-size: 2.5em!important;
+    padding: 8px;
 }
 
 .ion-md-add-circle{
@@ -58,11 +56,17 @@ ion-input{
 }
 
 .item-md .item-button{
-    background-color: #55acee;
+    background-color: #0094b8;
+    height: 36px;
 }
 
 .content-md {
-    color: #55acee;
+    color: #0094b8;
+}
+.card-content-md{
+    padding: 8px 7px !important;
 }
 
+.card-md{
+    min-height: 96%;}
 }
