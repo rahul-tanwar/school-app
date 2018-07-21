@@ -1,6 +1,7 @@
 <ion-header>
 
-    <ion-navbar color="danger">
+    <ion-navbar color="twitter">
+            <ion-icon name="arrow-round-back" (click)="goToBack()"></ion-icon>
         <ion-title>Notice Detail</ion-title>
     </ion-navbar>
 
@@ -27,7 +28,7 @@
                         <p>
                             <b>Attachement:</b>
                             <br/>
-                            <img [src]="notice.ImageURL" width="400px" height="150px">
+                            <img [src]="notice.ImageURL" width="400px" height="150px" (click)="imagePreview(notice.ImageURL)">
                     </ion-col>
 
 
@@ -36,11 +37,5 @@
 
         </ion-card-content>
 
-    </ion-card>
-
-
-
-
-
-
+    </ion-card> 
 </ion-content>

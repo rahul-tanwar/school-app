@@ -4,7 +4,7 @@ import { Notification } from '../../shared/models/Notifications';
 import { ActivityService } from '../../shared/services/ActivityService';
 import { UIHelper } from '../../shared/Helper/UIHelper';
 import { TOAST } from '../../shared/Enums';
-
+import { PhotoViewer } from '@ionic-native/photo-viewer';
 /**
  * Generated class for the AssignmentDetailPage page.
  *
@@ -25,9 +25,9 @@ export class AssignmentDetailPage {
 
     constructor(public navCtrl: NavController, public navParams: NavParams,
         public activityService: ActivityService,
+        public photoViewer: PhotoViewer,
         public uIHelper: UIHelper) {
-        debugger;
-        this.assignment = navParams.get('data');
+        this.assignment = navParams.get('assignmentData');
     }
 
     ionViewDidLoad() {
@@ -46,6 +46,10 @@ export class AssignmentDetailPage {
                 this.uIHelper.showToast('Successfully sent', this.toast.SUCCESS)
             }
         });
+    }
+
+    imagePreview(imgURL:string){
+        this.photoViewer.show(imgURL);
     }
 
 }

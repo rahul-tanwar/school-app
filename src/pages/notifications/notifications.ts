@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams,ModalController,ViewController } from 'ionic-angular';
-//import { AssignmentPage } from "../assignment/assignment";
+import { AssignmentPage } from "../assignment/assignment";
+import { NoticePage } from "../notice/notice";
+import { EventPage } from "../event/event";
  
 
 @IonicPage()
@@ -9,8 +11,13 @@ import { IonicPage, NavController, NavParams,ModalController,ViewController } fr
   templateUrl: 'notifications.html',
 })
 export class NotificationsPage {
-
+  assignmentTab: any;
+  noticeTab: any;
+  eventTab: any;
   constructor(public navCtrl: NavController, public navParams: NavParams,public modalCtrl: ModalController,public viewCtrl: ViewController) {
+    this.assignmentTab = AssignmentPage;
+    this.noticeTab = NoticePage;
+    this.eventTab = EventPage;
   }
 
   ionViewDidLoad() {

@@ -1,8 +1,3 @@
-<!-- <ion-header>
-  <ion-navbar >
-    <ion-title>Activity</ion-title>
-  </ion-navbar>
-</ion-header> -->
 
 
 <ion-content padding>
@@ -17,22 +12,24 @@
                         <ion-row>
                             <ion-col col-9>
                                 <ion-icon [name]="activityIcon[item.ActivityTypeId]"></ion-icon>
-                                <label class="">{{item.ActivityName}}</label>
+                                <label>{{item.ActivityName}}</label>
+                                <span class="subtype-heading" *ngIf="item.AcivitySubName">{{item.AcivitySubName}}</span>
                             </ion-col>
                             <ion-col col-3>
-                                <p class="tright time">{{item.ActivityDate | date:'shortTime'}}</p>
+                                <p class="tright">{{item.ActivityDate | date:'shortTime'}}</p>
                             </ion-col>
 
                         </ion-row>
                     </ion-grid>
 
                 </ion-card-header>
-                <img *ngIf="item.ImageURL" [src]="item.ImageURL" (click)="imagePreview(item.ImageURL)">
                 <ion-card-content>
                     <p *ngIf="item.Notes">
                         {{item.Notes}}
                     </p>
                 </ion-card-content>
+                <img *ngIf="item.ImageURL" [src]="item.ImageURL" (click)="imagePreview(item.ImageURL)">
+                
             </ion-card>
         </ion-item>
     </ion-item-group>

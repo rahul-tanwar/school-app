@@ -1,4 +1,4 @@
-<ion-header>
+<ion-header class="parent-dashboard-header">
 
     <ion-navbar color="twitter">
         <ion-title>Welcome
@@ -11,8 +11,7 @@
 
 
 <ion-content padding class="bg-color">
-
-    <ion-tabs color="light">
+    <ion-tabs color="light" tabsPlacement="bottom">
         <ion-tab tabIcon="podium" tabTitle="Activity" [root]="activityTab"></ion-tab>
         <ion-tab tabIcon="book" tabTitle="Diary" [root]="notificationTab"></ion-tab>
         <ion-tab tabIcon="calendar" tabTitle="Calender" [root]="clalenderTab"></ion-tab>

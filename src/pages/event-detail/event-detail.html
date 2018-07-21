@@ -1,6 +1,7 @@
 <ion-header>
 
-    <ion-navbar color="event">
+    <ion-navbar color="twitter">
+            <ion-icon name="arrow-round-back" (click)="goToBack()"></ion-icon>
         <ion-title>Event Detail</ion-title>
     </ion-navbar>
 
@@ -34,7 +35,7 @@
                         <p>
                             <b>Attachement:</b>
                             <br/>
-                            <img [src]="event.ImageURL" width="400px" height="150px">
+                            <img [src]="event.ImageURL" width="400px" height="150px" (click)="imagePreview(event.ImageURL)">
                     </ion-col>
                     <ion-col col-12 class="flex-container">
                         <ion-label>Would You Join ? </ion-label>

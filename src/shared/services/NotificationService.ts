@@ -24,7 +24,6 @@ export class NotificationService extends BaseService {
     }
 
     public getStudentNotifications(studentId: string): Observable<Notification[]> {
-        debugger;
         this.httpParams = new HttpParams()
             .set('studentId', studentId);
         return this.httpClient.get<Notification[]>(this.baseUrl + 'activity/getstudentnotifications', {

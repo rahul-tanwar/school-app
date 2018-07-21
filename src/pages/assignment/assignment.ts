@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ViewController,ModalController } from 'ionic-angular';
 import { NotificationService } from '../../shared/services/NotificationService';
 import { LoginStaticData } from '../../shared/models/LoginStaticData';
 import { Notification } from '../../shared/models/Notifications';
@@ -23,7 +23,8 @@ export class AssignmentPage {
     constructor(public navCtrl: NavController,
         public navParams: NavParams,
         public viewCtrl: ViewController,
-        public notificationService: NotificationService
+        public modalCtrl:ModalController,
+        public notificationService: NotificationService 
     ) {
     }
 
@@ -34,7 +35,6 @@ export class AssignmentPage {
 
     private getAssignments() {
         this.notificationService.getStudentNotifications(LoginStaticData.UserInfo.AppSelectedStudent.toString()).subscribe((result: Notification[]) => {
-          debugger;
             if (result && result.length) {
                 this.assignments = result.filter(item => item.NotificationTypeId === 1);
                 this.groupAssignmentsByDate();
@@ -58,12 +58,19 @@ export class AssignmentPage {
     }
 
     goToAssigmentDetail(assignment: Notification): void {
-        this.navCtrl.push('AssignmentDetailPage', {
-            data: assignment
-        });
+        // this.navCtrl.push('AssignmentDetailPage', {
+        //     data: assignment
+        // });
+
+        let assignmentModal = this.modalCtrl.create('AssignmentDetailPage',{assignmentData:assignment});
+       assignmentModal.onDidDismiss(data => {
+      console.log(data);
+    });
+    assignmentModal.present();
     }
 
     dismiss() {
         this.viewCtrl.dismiss();
     }
+ 
 }

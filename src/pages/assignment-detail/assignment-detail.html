@@ -1,7 +1,8 @@
 <ion-header>
 
-    <ion-navbar color="secondary">
-        <ion-title>Assignment Detail</ion-title>
+    <ion-navbar color="twitter">
+           <ion-icon name="arrow-round-back" (click)="goToBack()"></ion-icon>
+          <ion-title>Assignment Detail</ion-title>
     </ion-navbar>
 
 </ion-header>
@@ -39,7 +40,7 @@
 
                         <b>Attachement:</b>
                         <br/>
-                        <img [src]="assignment.ImageURL" width="400px" height="150px">
+                        <img [src]="assignment.ImageURL" width="400px" height="150px" (click)="imagePreview(assignment.ImageURL)">
                     </ion-col>
                     <ion-col col-12 class="flex-container">
                         <ion-label>To Be Completed</ion-label>

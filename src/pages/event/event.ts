@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ModalController, ViewController } from 'ionic-angular';
 import { NotificationService } from '../../shared/services/NotificationService';
 import { LoginStaticData } from '../../shared/models/LoginStaticData';
 import { Notification } from '../../shared/models/Notifications';
 import * as moment from 'moment';
+//import { EventDetailPage } from '../event-detail/event-detail';
 
 export class EventGroup {
     public date: moment.Moment;
@@ -23,7 +24,8 @@ export class EventPage {
 
     constructor(public navCtrl: NavController, public navParams: NavParams,
         public viewCtrl: ViewController,
-        public notificationService: NotificationService) {
+        public notificationService: NotificationService,
+    private modalCtrl:ModalController) {
     }
 
     ionViewDidLoad() {
@@ -33,7 +35,6 @@ export class EventPage {
 
     private getEvents() {
         this.notificationService.getStudentNotifications(LoginStaticData.UserInfo.AppSelectedStudent.toString()).subscribe((result: Notification[]) => {
-            debugger;
             if (result && result.length) {
                 this.events = result.filter(item => item.NotificationTypeId === 2);
                 this.groupEventsByDate();
@@ -55,14 +56,17 @@ export class EventPage {
         });
     }
 
-    goToEventDetail(event: Notification): void {
-        debugger;
-        this.navCtrl.push('EventDetailPage', {
-            data: event
+   public goToEventDetail(event: Notification): void {
+        let eventModal = this.modalCtrl.create('EventDetailPage',{data:event});
+        eventModal.onDidDismiss(data => {
         });
+        eventModal.present();
     }
 
     dismiss() {
         this.viewCtrl.dismiss();
     }
+
+   
+
 }

@@ -4,7 +4,7 @@ import { Notification } from '../../shared/models/Notifications';
 import { ActivityService } from '../../shared/services/ActivityService';
 import { UIHelper } from '../../shared/Helper/UIHelper';
 import { TOAST } from '../../shared/Enums';
-
+import { PhotoViewer } from '@ionic-native/photo-viewer';
 @IonicPage()
 @Component({
     selector: 'page-event-detail',
@@ -18,8 +18,8 @@ export class EventDetailPage {
 
     constructor(public navCtrl: NavController, public navParams: NavParams,
         public activityService: ActivityService,
+        public photoViewer: PhotoViewer,
         public uIHelper: UIHelper) {
-        debugger;
         this.event = navParams.get('data');
     }
 
@@ -36,6 +36,14 @@ export class EventDetailPage {
             }
 
         });
+    }
+
+    goToBack(): void {
+        this.navCtrl.pop();
+    }
+
+    imagePreview(imgURL:string){
+        this.photoViewer.show(imgURL);
     }
 
 

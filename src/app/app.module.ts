@@ -20,7 +20,7 @@ import { TeacherProfilePage } from "../pages/teacher-profile/teacher-profile";
 
 import { ParentDashboardPageModule } from "../pages/parent-dashbord/parent-dashboard.module";
 import { ParentDashboardPage } from "../pages/parent-dashbord/parent-dashboard";
-
+import { ActivitiesPage } from "../pages/activities/activities";
 import { TeacherDashboardPageModule } from "../pages/teacher-dashboard/teacher-dashboard.module";
 import { TeacherDashboardPage } from '../pages/teacher-dashboard/teacher-dashboard';
 import { MenuTeacherPage } from '../pages/menu-teacher/menu-teacher';
@@ -79,6 +79,7 @@ import { PhotoViewer } from '@ionic-native/photo-viewer';
         ParentDashboardPage,
         TeacherDashboardPage,
         MenuTeacherPage,
+        ActivitiesPage,
         ProfilePage,
         TeacherProfilePage,
         ParentMenuPage,

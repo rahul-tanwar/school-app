@@ -1,31 +1,17 @@
-<ion-header>
-    <ion-navbar color="danger">
-        <ion-toolbar>
-            <ion-title>
-                Notices
-            </ion-title>
-            <ion-buttons start>
-                <button ion-button (click)="dismiss()">
-                    <span ion-text color="primary" showWhen="ios">Cancel</span>
-                    <ion-icon name="md-close" showWhen="android, windows"></ion-icon>
-                </button>
-            </ion-buttons>
-        </ion-toolbar>
-    </ion-navbar>
-</ion-header>
 
-<ion-content padding class="bg-color">
+
+<ion-content padding>
     <ion-item-group *ngFor="let group of noticesGroup">
         <ion-item>
             <ion-item-divider>{{ group.date | date:'dd/MM/yyyy' }}</ion-item-divider>
 
-            <ion-card *ngFor="let notice of group.notices">
-                <ion-card-header class="custom-padding-5">
+            <ion-card *ngFor="let notice of group.notices" (click)="goToNoticeDetail(notice)">
+                <ion-card-header >
                     <ion-grid>
                         <ion-row>
                             <ion-col col-9>
                                 <ion-icon name="camera" class="icon-js-custom"></ion-icon>
-                                <label class="activty-text-header">{{ notice.Title }}</label>
+                                <label>{{ notice.Title }}</label>
                             </ion-col>
                             <ion-col col-3>
                                 <p class="tright">{{notice.CreatedDate | date:'shortTime'}}</p>
@@ -35,15 +21,11 @@
                     </ion-grid>
                 </ion-card-header>
                 <ion-card-content>
-
-                    <div class="notice-content">
-                        <img *ngIf="notice.ImageURL" [src]="notice.ImageURL" width="400px" height="150px">
-                        <p *ngIf="notice.Notes">
-                            {{notice.Notes}}
-                        </p>
-                        <h3 class="view-btn" (click)="goToNoticeDetail(notice)">View</h3>
-                    </div>
+                            <p *ngIf="notice.Notes">
+                                    {{notice.Notes}}
+                                </p>
                 </ion-card-content>
+                <img *ngIf="notice.ImageURL" [src]="notice.ImageURL">
             </ion-card>
         </ion-item>
     </ion-item-group>

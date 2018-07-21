@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="io.ionic.starter" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>School</name>
+<widget id="com.test.school" version="0.0.2" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>KIDOJO</name>
     <description>An awesome Ionic/Cordova app.</description>
     <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
     <content src="index.html" />
@@ -88,6 +88,10 @@
         <variable name="PHOTOLIBRARY_USAGE_DESCRIPTION" value="for activity" />
     </plugin>
     <plugin name="com.telerik.plugins.nativepagetransitions" spec="^0.6.5" />
-    <engine name="android" spec="^6.3.0" />
     <plugin name="com-sarriaroman-photoviewer" spec="^1.1.18" />
+    <plugin name="phonegap-plugin-push" spec="^2.1.3">
+        <variable name="SENDER_ID" value="202921198727" />
+        <variable name="FCM_VERSION" value="11.6.2" />
+    </plugin>
+    <engine name="android" spec="^6.3.0" />
 </widget>

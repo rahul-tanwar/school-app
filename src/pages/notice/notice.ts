@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams,ModalController, ViewController } from 'ionic-angular';
 import { NotificationService } from '../../shared/services/NotificationService';
 import { LoginStaticData } from '../../shared/models/LoginStaticData';
 import { Notification } from '../../shared/models/Notifications';
@@ -22,7 +22,8 @@ export class NoticePage {
 
     constructor(public navCtrl: NavController, public navParams: NavParams,
         public viewCtrl: ViewController,
-        public notificationService: NotificationService) {
+        public notificationService: NotificationService,
+        private modalCtrl:ModalController) {
     }
 
 
@@ -33,7 +34,6 @@ export class NoticePage {
 
     private getNotices() {
         this.notificationService.getStudentNotifications(LoginStaticData.UserInfo.AppSelectedStudent.toString()).subscribe((result: Notification[]) => {
-            debugger;
             if (result && result.length) {
                 this.notices = result.filter(item => item.NotificationTypeId === 3);
                 this.groupNoticeData();
@@ -42,10 +42,10 @@ export class NoticePage {
     }
 
     goToNoticeDetail(notice: Notification): void {
-        debugger;
-        this.navCtrl.push('NoticeDetailPage', {
-            data: notice
+        let noticeModal = this.modalCtrl.create('NoticeDetailPage',{data:notice});
+        noticeModal.onDidDismiss(data => {
         });
+        noticeModal.present();
     }
 
     dismiss() {
